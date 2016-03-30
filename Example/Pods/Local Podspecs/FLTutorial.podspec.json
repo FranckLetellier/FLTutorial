@@ -1,0 +1,25 @@
+{
+  "name": "FLTutorial",
+  "version": "0.1.0",
+  "summary": "A short description of FLTutorial.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/FLTutorial",
+  "license": "MIT",
+  "authors": {
+    "Franck LETELLIER": "franck.letellier@niji.fr"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/FLTutorial.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "FLTutorial": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}

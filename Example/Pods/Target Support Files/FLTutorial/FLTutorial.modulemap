@@ -1,0 +1,6 @@
+framework module FLTutorial {
+  umbrella header "FLTutorial-umbrella.h"
+
+  export *
+  module * { export * }
+}

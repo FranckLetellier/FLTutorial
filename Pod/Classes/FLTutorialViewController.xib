@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="DINPro-Regular.otf">
+            <string>DINPro-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FLTutorialViewController">
+            <connections>
+                <outlet property="exitButton" destination="dM3-cg-LXe" id="ogz-xj-TZV"/>
+                <outlet property="imageScrollView" destination="30R-mC-Ed1" id="JX9-yU-jdG"/>
+                <outlet property="leftButton" destination="hix-kZ-KPz" id="8za-hr-TkC"/>
+                <outlet property="pageControl" destination="Dzg-Z3-fyK" id="3mX-RA-Eo3"/>
+                <outlet property="rightButton" destination="fdk-ld-zZl" id="O8L-ef-nH1"/>
+                <outlet property="scrollMaxHeight" destination="v8S-Bq-uWZ" id="sIr-S3-WTo"/>
+                <outlet property="scrollViewWidth" destination="A6G-mJ-hYT" id="Zjt-NR-BAj"/>
+                <outlet property="textScrollView" destination="FPj-tR-UR5" id="AgY-ae-nsd"/>
+                <outlet property="view" destination="LoM-ka-5kv" id="3XE-kU-e5j"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="LoM-ka-5kv">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30R-mC-Ed1" userLabel="Scroll View-image">
+                    <rect key="frame" x="140" y="32" width="320" height="343"/>
+                    <color key="backgroundColor" red="0.8980392157" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="A6G-mJ-hYT"/>
+                        <constraint firstAttribute="height" constant="343" placeholder="YES" id="q5i-lp-iXw"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="393" id="v8S-Bq-uWZ"/>
+                    </constraints>
+                </scrollView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPj-tR-UR5" userLabel="Scroll View-text">
+                    <rect key="frame" x="0.0" y="375" width="600" height="225"/>
+                    <color key="backgroundColor" red="0.98431372549999996" green="0.76470588240000004" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="225" id="aXz-5k-9Tv"/>
+                    </constraints>
+                </scrollView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Dzg-Z3-fyK">
+                    <rect key="frame" x="281" y="545" width="39" height="37"/>
+                    <color key="pageIndicatorTintColor" red="0.88235294119999996" green="0.68627450980000004" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="currentPageIndicatorTintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </pageControl>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdk-ld-zZl" userLabel="Button - next">
+                    <rect key="frame" x="537" y="548" width="46" height="30"/>
+                    <color key="backgroundColor" red="0.38431372549999998" green="0.67843137249999996" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="U6H-7l-rbY"/>
+                        <constraint firstAttribute="height" constant="30" id="r98-MO-din"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="nextAction:" destination="-1" eventType="touchUpInside" id="3do-YG-fzQ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dM3-cg-LXe" userLabel="Button - close">
+                    <rect key="frame" x="508" y="544" width="75" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="75" id="vX9-p3-f0P"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="15"/>
+                    <state key="normal" title="common_finish">
+                        <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="closeAction:" destination="-1" eventType="touchUpInside" id="ZQc-4l-msA"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NB-CW-Soi" userLabel="Button - close cross">
+                    <rect key="frame" x="554" y="375" width="46" height="46"/>
+                    <color key="backgroundColor" red="0.38245752430000002" green="0.67739335320000005" blue="0.2325855453" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="Ja3-HZ-qg0"/>
+                        <constraint firstAttribute="height" constant="46" id="dTJ-2K-PnK"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="closeAction:" destination="-1" eventType="touchUpInside" id="WZn-QP-ipv"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hix-kZ-KPz" userLabel="Button - previous">
+                    <rect key="frame" x="7" y="548" width="46" height="30"/>
+                    <color key="backgroundColor" red="0.38431372549999998" green="0.67843137249999996" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="0zX-Co-3P3"/>
+                        <constraint firstAttribute="width" constant="46" id="Go6-VE-rvN"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="previousAction:" destination="-1" eventType="touchUpInside" id="Osd-80-96Z"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.38431372549999998" green="0.67843137249999996" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Dzg-Z3-fyK" secondAttribute="bottom" constant="18" id="128-oB-KmD"/>
+                <constraint firstAttribute="trailing" secondItem="FPj-tR-UR5" secondAttribute="trailing" id="4p8-Dj-nhe"/>
+                <constraint firstAttribute="trailing" secondItem="dM3-cg-LXe" secondAttribute="trailing" constant="17" id="5aY-T3-zBM"/>
+                <constraint firstItem="FPj-tR-UR5" firstAttribute="centerX" secondItem="30R-mC-Ed1" secondAttribute="centerX" id="H17-OQ-5jD"/>
+                <constraint firstItem="FPj-tR-UR5" firstAttribute="top" secondItem="30R-mC-Ed1" secondAttribute="bottom" id="KyV-AV-B28"/>
+                <constraint firstAttribute="bottom" secondItem="hix-kZ-KPz" secondAttribute="bottom" constant="22" id="MMq-rJ-1NC"/>
+                <constraint firstItem="hix-kZ-KPz" firstAttribute="leading" secondItem="LoM-ka-5kv" secondAttribute="leading" constant="7" id="PaG-M9-5Ma"/>
+                <constraint firstAttribute="trailing" secondItem="fdk-ld-zZl" secondAttribute="trailing" constant="17" id="Tm4-zV-QRY"/>
+                <constraint firstAttribute="bottom" secondItem="FPj-tR-UR5" secondAttribute="bottom" id="YZn-iG-utr"/>
+                <constraint firstItem="30R-mC-Ed1" firstAttribute="top" secondItem="LoM-ka-5kv" secondAttribute="top" priority="950" id="dSS-b0-GTy"/>
+                <constraint firstItem="2NB-CW-Soi" firstAttribute="trailing" secondItem="FPj-tR-UR5" secondAttribute="trailing" id="fle-hn-T6g"/>
+                <constraint firstItem="2NB-CW-Soi" firstAttribute="top" secondItem="FPj-tR-UR5" secondAttribute="top" id="hqx-X3-WFM"/>
+                <constraint firstAttribute="bottom" secondItem="dM3-cg-LXe" secondAttribute="bottom" constant="24" id="pWN-1X-HsX"/>
+                <constraint firstAttribute="centerX" secondItem="Dzg-Z3-fyK" secondAttribute="centerX" id="v1U-Tj-291"/>
+                <constraint firstAttribute="bottom" secondItem="fdk-ld-zZl" secondAttribute="bottom" constant="22" id="wjb-Wn-itJ"/>
+                <constraint firstItem="FPj-tR-UR5" firstAttribute="leading" secondItem="LoM-ka-5kv" secondAttribute="leading" id="yKP-51-o2g"/>
+            </constraints>
+            <point key="canvasLocation" x="433" y="485"/>
+        </view>
+    </objects>
+</document>

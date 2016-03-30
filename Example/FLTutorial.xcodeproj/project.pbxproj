@@ -21,6 +21,7 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		8192A9B01C8F24640088E202 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8192A9AF1C8F24640088E202 /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		B86173226745F39396800742 /* Pods_FLTutorial_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A67010484A8C19BD3C17946 /* Pods_FLTutorial_Example.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		673E7991DCE53200A6EEF822 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6A67010484A8C19BD3C17946 /* Pods_FLTutorial_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FLTutorial_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BA48D9FE431F0B4DF81B150 /* Pods-FLTutorial_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FLTutorial_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FLTutorial_Example/Pods-FLTutorial_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		8192A9AF1C8F24640088E202 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C8FBBF440A057FD40F00E2CF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		ECF0547C691CB54A06D8F453 /* Pods-FLTutorial_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FLTutorial_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FLTutorial_Tests/Pods-FLTutorial_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				6003F5A6195388D20070C39A /* FLViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				8192A9AF1C8F24640088E202 /* LaunchScreen.storyboard */,
 			);
 			name = "Example for FLTutorial";
 			path = FLTutorial;
@@ -279,6 +282,7 @@
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				8192A9B01C8F24640088E202 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +520,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FLTutorial/FLTutorial-Prefix.pch";
 				INFOPLIST_FILE = "FLTutorial/FLTutorial-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -532,6 +537,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FLTutorial/FLTutorial-Prefix.pch";
 				INFOPLIST_FILE = "FLTutorial/FLTutorial-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

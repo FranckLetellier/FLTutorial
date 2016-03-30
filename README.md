@@ -22,7 +22,7 @@ pod "FLTutorial"
 
 ## Author
 
-Franck LETELLIER, franck.letellier@niji.fr
+Franck LETELLIER, franckletellier@gmail.com
 
 ## License
 

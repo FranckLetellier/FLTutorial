@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '9012FF3EB75E0621078BC12A'
+               BlueprintIdentifier = '1DAFC684377F1718A30B853D'
                BlueprintName = 'FLTutorial'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'FLTutorial.framework'>

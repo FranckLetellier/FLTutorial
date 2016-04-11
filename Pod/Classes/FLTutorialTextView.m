@@ -12,6 +12,8 @@
 
 @interface FLTutorialTextView ()
 
+//Not KVO complient
+//assert(<#e#>)
 @property (nonatomic, weak) IBOutlet UILabel* label;
 @property (nonatomic, weak) IBOutlet UIImageView* imageV;
 

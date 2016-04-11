@@ -85,7 +85,6 @@
         
         [self.textScrollView addSubview:view];
     }
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -105,6 +104,33 @@
 -(NSInteger) maxYValue
 {
     return [@(self.imageScrollView.contentSize.height - self.imageScrollView.bounds.size.height) integerValue];
+}
+
+-(FLTutorialData *)data
+{
+    if (!_data)
+    {
+        if ([self.datasource respondsToSelector:@selector(numberOfPageInTutorialViewController:)]
+            && [self.datasource respondsToSelector:@selector(tutorialViewController:pageDataForIndex:)])
+        {
+            _data = [[FLTutorialData alloc] init];
+            if ([self.datasource respondsToSelector:@selector(launchImageInTutorialViewController:)])
+            {
+                _data.startingImage = [UIImage imageNamed:[self.datasource launchImageInTutorialViewController:self]];
+            }
+            
+            NSMutableArray<FLTutorialPageData*>* mutablePages = [NSMutableArray array];
+            NSInteger pageCount = [self.datasource numberOfPageInTutorialViewController:self];
+            for (NSInteger index = 0; index < pageCount; ++index)
+            {
+                FLTutorialPageData* page = [self.datasource tutorialViewController:self pageDataForIndex:index];
+                [mutablePages addObject:page];
+            }
+            
+            _data.pages = [NSArray arrayWithArray:mutablePages];
+        }
+    }
+    return _data;
 }
 
 #pragma mark - Actions

@@ -13,7 +13,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FLTutorialTextView">
             <connections>
-                <outlet property="imageV" destination="eW4-MJ-BiI" id="gp0-j1-m9p"/>
                 <outlet property="label" destination="Nfh-vU-uTL" id="00T-OJ-OIY"/>
             </connections>
         </placeholder>
@@ -22,7 +21,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="362"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contextual_logo_demarche1" translatesAutoresizingMaskIntoConstraints="NO" id="eW4-MJ-BiI">
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_quit" translatesAutoresizingMaskIntoConstraints="NO" id="eW4-MJ-BiI">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="121"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="Nfh-vU-uTL">
@@ -47,13 +46,12 @@
             <nil key="simulatedTopBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="imageV" destination="eW4-MJ-BiI" id="Fm6-Aj-NOh"/>
                 <outlet property="label" destination="Nfh-vU-uTL" id="Olq-Fr-x7L"/>
             </connections>
             <point key="canvasLocation" x="435" y="496"/>
         </view>
     </objects>
     <resources>
-        <image name="contextual_logo_demarche1" width="51" height="51"/>
+        <image name="icon_quit" width="40" height="40"/>
     </resources>
 </document>

@@ -10,7 +10,7 @@
 #import <FLTutorial/FLTutorial.h>
 
 
-@interface FLViewController ()<FLTutorialViewControllerDelegate>
+@interface FLViewController ()<FLTutorialViewControllerDelegate,FLTutorialViewControllerDataSource>
 
 @end
 
@@ -25,8 +25,12 @@
 
 -(IBAction)launchTutorialAction:(id)sender
 {
+    
     FLTutorialViewController* tutorialVC = [FLTutorialViewController tutorialViewController];
+    
+    
     tutorialVC.delegate = self;
+    tutorialVC.datasource = self;
     [self presentViewController:tutorialVC animated:YES completion:nil];
 }
 
@@ -42,6 +46,22 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark - FLTutorialViewControllerDataSource method
+-(NSInteger)numberOfPageInTutorialViewController:(FLTutorialViewController*) tutorial
+{
+    return 2;
+}
+
+-(FLTutorialPageData*)tutorialViewController:(FLTutorialViewController*) tutorial
+                            pageDataForIndex:(NSInteger)index
+{
+    FLTutorialPageData* pageData;
+    pageData = [FLTutorialPageData tutorialPageWithImageName:@"img_page_1"
+                                                    iconName:@"icon_page_1"
+                                                        text:@"blabla"
+                                                      offset:0];
+    return pageData;
+}
 
 
 @end

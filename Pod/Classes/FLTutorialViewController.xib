@@ -64,8 +64,8 @@
                         <action selector="nextAction:" destination="-1" eventType="touchUpInside" id="3do-YG-fzQ"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dM3-cg-LXe" userLabel="Button - close">
-                    <rect key="frame" x="508" y="544" width="75" height="32"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dM3-cg-LXe" userLabel="Button - close">
+                    <rect key="frame" x="508" y="546" width="75" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="75" id="vX9-p3-f0P"/>
                     </constraints>
@@ -78,13 +78,13 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NB-CW-Soi" userLabel="Button - close cross">
-                    <rect key="frame" x="554" y="375" width="46" height="46"/>
+                    <rect key="frame" x="557" y="378" width="40" height="40"/>
                     <color key="backgroundColor" red="0.38245752430000002" green="0.67739335320000005" blue="0.2325855453" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="46" id="Ja3-HZ-qg0"/>
-                        <constraint firstAttribute="height" constant="46" id="dTJ-2K-PnK"/>
+                        <constraint firstAttribute="width" constant="40" id="Ja3-HZ-qg0"/>
+                        <constraint firstAttribute="height" constant="40" id="dTJ-2K-PnK"/>
                     </constraints>
-                    <state key="normal">
+                    <state key="normal" backgroundImage="icon_quit">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -120,8 +120,8 @@
                 <constraint firstAttribute="trailing" secondItem="fdk-ld-zZl" secondAttribute="trailing" constant="17" id="Tm4-zV-QRY"/>
                 <constraint firstAttribute="bottom" secondItem="FPj-tR-UR5" secondAttribute="bottom" id="YZn-iG-utr"/>
                 <constraint firstItem="30R-mC-Ed1" firstAttribute="top" secondItem="LoM-ka-5kv" secondAttribute="top" priority="950" id="dSS-b0-GTy"/>
-                <constraint firstItem="2NB-CW-Soi" firstAttribute="trailing" secondItem="FPj-tR-UR5" secondAttribute="trailing" id="fle-hn-T6g"/>
-                <constraint firstItem="2NB-CW-Soi" firstAttribute="top" secondItem="FPj-tR-UR5" secondAttribute="top" id="hqx-X3-WFM"/>
+                <constraint firstItem="2NB-CW-Soi" firstAttribute="trailing" secondItem="FPj-tR-UR5" secondAttribute="trailing" constant="-3" id="fle-hn-T6g"/>
+                <constraint firstItem="2NB-CW-Soi" firstAttribute="top" secondItem="FPj-tR-UR5" secondAttribute="top" constant="3" id="hqx-X3-WFM"/>
                 <constraint firstAttribute="bottom" secondItem="dM3-cg-LXe" secondAttribute="bottom" constant="24" id="pWN-1X-HsX"/>
                 <constraint firstAttribute="centerX" secondItem="Dzg-Z3-fyK" secondAttribute="centerX" id="v1U-Tj-291"/>
                 <constraint firstAttribute="bottom" secondItem="fdk-ld-zZl" secondAttribute="bottom" constant="22" id="wjb-Wn-itJ"/>
@@ -130,4 +130,7 @@
             <point key="canvasLocation" x="433" y="485"/>
         </view>
     </objects>
+    <resources>
+        <image name="icon_quit" width="40" height="40"/>
+    </resources>
 </document>

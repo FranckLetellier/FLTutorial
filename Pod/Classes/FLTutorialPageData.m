@@ -10,12 +10,27 @@
 
 @implementation FLTutorialPageData
 
-+(FLTutorialPageData*)tutorialPageWithImage:(NSString*)image
-                                       icon:(NSString*)icon
-                                       text:(NSString*)text
-                                     offset:(NSInteger)offset
++(FLTutorialPageData*)tutorialPageWithImageName:(NSString*)image
+                                       iconName:(NSString*)icon
+                                           text:(NSString*)text
+                                         offset:(NSInteger)offset
 {
-    return nil;
+    FLTutorialPageData* page = [[self alloc] init];
+    //This is wrong as it consume a lot of memory
+    //We need to use initWithCGImage and use the scaling factor
+    //And remove them from the asset catalogue (cannot be load otherwise)
+    page.pageImage = [UIImage imageNamed:image];
+    //NSString* path = [[NSBundle mainBundle] pathForResource:image ofType:nil];
+    //page.image = [[UIImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:image ofType:nil]];
+    page.pageIcon = [UIImage imageNamed:icon];
+    page.pageText = text;
+    page.yOffset = offset;
+    return  page;
 }
+
+@end
+
+
+@implementation FLTutorialData
 
 @end

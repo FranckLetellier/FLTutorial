@@ -17,17 +17,17 @@
 @property (nonatomic, assign) NSInteger yOffset;
 
 
-+(FLTutorialPageData*)tutorialPageWithImage:(NSString*)image
-                                       icon:(NSString*)icon
-                                       text:(NSString*)text
-                                     offset:(NSInteger)offset;
++(FLTutorialPageData*)tutorialPageWithImageName:(NSString*)image
+                                       iconName:(NSString*)icon
+                                           text:(NSString*)text
+                                         offset:(NSInteger)offset;
 
 @end
 
 @interface FLTutorialData : NSObject
 
 #pragma mark - Properties
-@property (nonatomic, readonly) UIImage* startingImage;
-@property (nonatomic, readonly) NSArray<FLTutorialPageData*>* pages;
+@property (nonatomic, strong) UIImage* startingImage;
+@property (nonatomic, strong) NSArray<FLTutorialPageData*>* pages;
 
 @end

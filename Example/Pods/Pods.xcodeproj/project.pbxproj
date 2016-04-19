@@ -963,17 +963,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>1F1FCF2687EA9BDAC91555B8A50D07E7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Localizable.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>201BF9C605852822CA5A65ADE282A310</key>
 		<dict>
 			<key>fileRef</key>
@@ -1098,22 +1087,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>241CCFBE5CE588778B45D770BE626F21</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2D92BFE47B09DD6A368E924A518F2C3C</string>
-				<string>1F1FCF2687EA9BDAC91555B8A50D07E7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Assets</string>
-			<key>path</key>
-			<string>Assets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>254BD604897A2F09D4BDB20EB257ACC9</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1157,6 +1130,13 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>262C321C5F80D1EEBFF3FDDEDDBD890B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B38221CD7BB3A0F804EC7F1064325B65</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>26B782A5F5606BC64AF7B709A1D93B4E</key>
 		<dict>
@@ -1352,19 +1332,6 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>2D92BFE47B09DD6A368E924A518F2C3C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>DefaultAssets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>2E14619153A453BB8DF389FB6EA147BE</key>
 		<dict>
 			<key>fileRef</key>
@@ -1447,13 +1414,6 @@
 			<string>Expecta/Matchers/EXPMatchers+endWith.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3124162DD8C120EBABE0F07E173A7DDE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2D92BFE47B09DD6A368E924A518F2C3C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
 		</dict>
 		<key>31397C03D9B191BF00B422FEA5914EBC</key>
 		<dict>
@@ -2359,7 +2319,7 @@
 			<array>
 				<string>D796D19578409A6F86C7CBDBC72EC199</string>
 				<string>3DA480F7951F413F5123F0909E714CF0</string>
-				<string>9AF255F112406C947CD638DBA4E76C9D</string>
+				<string>D02DDE2C0427193B243EEB6A856B22E2</string>
 			</array>
 			<key>buildRules</key>
 			<array/>
@@ -2972,7 +2932,7 @@
 		<dict>
 			<key>children</key>
 			<array>
-				<string>241CCFBE5CE588778B45D770BE626F21</string>
+				<string>D3AC8CFD0BA4555DDCA60BA31CCFC021</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -4401,20 +4361,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>9AF255F112406C947CD638DBA4E76C9D</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>3124162DD8C120EBABE0F07E173A7DDE</string>
-				<string>BD0698FDA68B0FE5551CCF5A17B27DA7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
 		<key>9B097D27B5AD98A52CC165EFAE43F2B5</key>
 		<dict>
 			<key>isa</key>
@@ -4642,6 +4588,19 @@
 			<string>22C6E607E674AB20554080B3E2A4B463</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>A3EDC9C6E304A867F66854E678C127ED</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>DefaultAssets.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>A40BD63BA2BF1E89CAE511B5324024F4</key>
 		<dict>
@@ -5147,6 +5106,17 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>B38221CD7BB3A0F804EC7F1064325B65</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>en.lproj</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>B4A617F1464A48980127A218AB18B898</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -5335,10 +5305,10 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>BD0698FDA68B0FE5551CCF5A17B27DA7</key>
+		<key>BD08CC16D4C1A9ADC105B9DC31AC3582</key>
 		<dict>
 			<key>fileRef</key>
-			<string>1F1FCF2687EA9BDAC91555B8A50D07E7</string>
+			<string>A3EDC9C6E304A867F66854E678C127ED</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -5739,6 +5709,20 @@
 			<key>targetProxy</key>
 			<string>3F30D531BC57E3A78477FBDA97B3CDD7</string>
 		</dict>
+		<key>D02DDE2C0427193B243EEB6A856B22E2</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>BD08CC16D4C1A9ADC105B9DC31AC3582</string>
+				<string>262C321C5F80D1EEBFF3FDDEDDBD890B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
 		<key>D148E142A756A0CD8BA055B657862814</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -5827,6 +5811,22 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>D3AC8CFD0BA4555DDCA60BA31CCFC021</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A3EDC9C6E304A867F66854E678C127ED</string>
+				<string>B38221CD7BB3A0F804EC7F1064325B65</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Assets</string>
+			<key>path</key>
+			<string>Assets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>D41D8CD98F00B204E9800998ECF8427E</key>
 		<dict>

@@ -14,6 +14,13 @@
 @protocol FLTutorialViewControllerDelegate <NSObject>
 
 @optional
+-(NSString*)closeButtonTextForTutorialViewController:(FLTutorialViewController*) tutorial;
+-(UIColor*)foregroundColorForTutorialViewController:(FLTutorialViewController*) tutorial;
+-(UIColor*)backgroundColorColorForTutorialViewController:(FLTutorialViewController*) tutorial;
+-(UIColor*)pageControlActiveColorForTutorialViewController:(FLTutorialViewController*) tutorial;
+-(void)tutorialViewController:(FLTutorialViewController*) tutorial
+         pageControlToCustomize:(UIPageControl*)pageControl;
+
 -(void)tutorialViewController:(FLTutorialViewController*) tutorial
               didArriveAtPage:(NSUInteger)index;
 

@@ -46,10 +46,32 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+-(NSString*)closeButtonTextForTutorialViewController:(FLTutorialViewController*) tutorial;
+{
+    return @"Fermer";
+}
+
+-(UIColor*)foregroundColorForTutorialViewController:(FLTutorialViewController*) tutorial;
+{
+    return [UIColor redColor];
+}
+
+-(UIColor*)backgroundColorColorForTutorialViewController:(FLTutorialViewController*) tutorial;
+{
+    return [UIColor blueColor];
+}
+
+-(void)tutorialViewController:(FLTutorialViewController*) tutorial
+       pageControlToCustomize:(UIPageControl*)pageControl
+{
+    pageControl.pageIndicatorTintColor = [UIColor whiteColor];
+    pageControl.currentPageIndicatorTintColor = [UIColor greenColor];
+}
+
 #pragma mark - FLTutorialViewControllerDataSource method
 -(NSInteger)numberOfPageInTutorialViewController:(FLTutorialViewController*) tutorial
 {
-    return 2;
+    return 3;
 }
 
 -(FLTutorialPageData*)tutorialViewController:(FLTutorialViewController*) tutorial

@@ -29,6 +29,7 @@
 
 #pragma mark - Private Properties
 @property (nonatomic, strong) FLTutorialData* data;
+@property (nonatomic, strong) NSString* closeButtonText;
 @property (nonatomic) NSInteger lastIndex;
 
 @end
@@ -46,25 +47,13 @@
 {
     [super viewDidLoad];
     
-    [self.exitButton setTitle:_Tb(@"tutorial.quit")
-                     forState:UIControlStateNormal];
+
+    
     //Setup hidden button
     self.leftButton.alpha = 0;
     self.exitButton.hidden = YES;
     
-    FLTutorialPageData* imageUnderData = self.data.pages[0];
-    self.scrollViewWidth.constant = imageUnderData.pageImage.size.width;
-    self.scrollMaxHeight.constant = imageUnderData.pageImage.size.height;
-    self.imageVUnder = [[UIImageView alloc] initWithImage:imageUnderData.pageImage];
-    self.imageScrollView.contentSize =  self.imageVUnder.bounds.size;
-    [self.imageScrollView addSubview:self.imageVUnder];
-    
-    self.imageVAbove = [[UIImageView alloc] initWithImage:self.data.startingImage];
-    [self.imageScrollView addSubview:self.imageVAbove];
-    
-    
-    self.pageControl.numberOfPages = self.data.pages.count;
-    
+    [self reloadData];
     
     self.textScrollView.delegate = self;
 }
@@ -104,10 +93,67 @@
     [super viewWillDisappear:animated];
 }
 
+#pragma mark - Public methods
+-(void)reloadData
+{
+    //Reset all data
+    self.closeButtonText = nil;
+    self.data = nil;
+    
+    [self.exitButton setTitle:self.closeButtonText forState:UIControlStateNormal];
+    [self.exitButton setTitle:self.closeButtonText forState:UIControlStateSelected];
+    [self.exitButton setTitle:self.closeButtonText forState:UIControlStateHighlighted];
+    
+    
+    FLTutorialPageData* imageUnderData = self.data.pages[0];
+    self.scrollViewWidth.constant = imageUnderData.pageImage.size.width;
+    self.scrollMaxHeight.constant = imageUnderData.pageImage.size.height;
+    self.imageVUnder = [[UIImageView alloc] initWithImage:imageUnderData.pageImage];
+    self.imageScrollView.contentSize =  self.imageVUnder.bounds.size;
+    [self.imageScrollView addSubview:self.imageVUnder];
+    
+    self.imageVAbove = [[UIImageView alloc] initWithImage:self.data.startingImage];
+    [self.imageScrollView addSubview:self.imageVAbove];
+    
+    
+    self.pageControl.numberOfPages = self.data.pages.count;
+    
+    //Change colors
+    if ([self.delegate respondsToSelector:@selector(backgroundColorColorForTutorialViewController:)])
+    {
+        self.view.backgroundColor = [self.delegate backgroundColorColorForTutorialViewController:self];
+    }
+    if ([self.delegate respondsToSelector:@selector(foregroundColorForTutorialViewController:)])
+    {
+        self.textScrollView.backgroundColor = [self.delegate foregroundColorForTutorialViewController:self];
+    }
+    if ([self.delegate respondsToSelector:@selector(tutorialViewController:pageControlToCustomize:)])
+    {
+        [self.delegate tutorialViewController:self pageControlToCustomize:self.pageControl];
+    }
+    
+}
+
 #pragma mark - Private methods
 -(NSInteger) maxYValue
 {
     return [@(self.imageScrollView.contentSize.height - self.imageScrollView.bounds.size.height) integerValue];
+}
+
+-(NSString*)closeButtonText
+{
+    if (!_closeButtonText)
+    {
+        if ([self.delegate respondsToSelector:@selector(closeButtonTextForTutorialViewController:)])
+        {
+            _closeButtonText = [self.delegate closeButtonTextForTutorialViewController:self];
+        }
+        else
+        {
+            _closeButtonText = _Tb(@"tutorial.quit");
+        }
+    }
+    return _closeButtonText;
 }
 
 -(FLTutorialData *)data

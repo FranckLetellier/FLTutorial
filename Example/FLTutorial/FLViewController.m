@@ -56,10 +56,19 @@
                             pageDataForIndex:(NSInteger)index
 {
     FLTutorialPageData* pageData;
-    pageData = [FLTutorialPageData tutorialPageWithImageName:@"img_page_1"
-                                                    iconName:@"icon_page_1"
-                                                        text:@"blabla"
-                                                      offset:0];
+    //This is wrong as it consume a lot of memory
+    //We need to use initWithCGImage and use the scaling factor
+    //And remove them from the asset catalogue (cannot be load otherwise)
+    
+    //NSString* path = [[NSBundle mainBundle] pathForResource:image ofType:nil];
+    //page.image = [[UIImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:image ofType:nil]];
+    UIImage* pageImage = [UIImage imageNamed:@"img_page_1"];
+    UIImage* iconImage = [UIImage imageNamed:@"icon_page_1"];
+    
+    pageData = [FLTutorialPageData tutorialPageWithImage:pageImage
+                                                    icon:iconImage
+                                                    text:@"blabla"
+                                                        offset:0];
     return pageData;
 }
 

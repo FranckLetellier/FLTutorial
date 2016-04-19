@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
 
+#import "FLConstants.h"
 #import "FLTutorial.h"
 #import "FLTutorialPageData.h"
 #import "FLTutorialTextView.h"

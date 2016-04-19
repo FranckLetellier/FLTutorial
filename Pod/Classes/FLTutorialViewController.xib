@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="DINPro-Regular.otf">
@@ -51,12 +51,11 @@
                 </pageControl>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdk-ld-zZl" userLabel="Button - next">
                     <rect key="frame" x="537" y="548" width="46" height="30"/>
-                    <color key="backgroundColor" red="0.38431372549999998" green="0.67843137249999996" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="46" id="U6H-7l-rbY"/>
                         <constraint firstAttribute="height" constant="30" id="r98-MO-din"/>
                     </constraints>
-                    <state key="normal">
+                    <state key="normal" backgroundImage="default_right_icon">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -79,12 +78,11 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NB-CW-Soi" userLabel="Button - close cross">
                     <rect key="frame" x="557" y="378" width="40" height="40"/>
-                    <color key="backgroundColor" red="0.38245752430000002" green="0.67739335320000005" blue="0.2325855453" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="Ja3-HZ-qg0"/>
                         <constraint firstAttribute="height" constant="40" id="dTJ-2K-PnK"/>
                     </constraints>
-                    <state key="normal" backgroundImage="icon_quit">
+                    <state key="normal" backgroundImage="default_quit">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -94,12 +92,11 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hix-kZ-KPz" userLabel="Button - previous">
                     <rect key="frame" x="7" y="548" width="46" height="30"/>
-                    <color key="backgroundColor" red="0.38431372549999998" green="0.67843137249999996" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="0zX-Co-3P3"/>
                         <constraint firstAttribute="width" constant="46" id="Go6-VE-rvN"/>
                     </constraints>
-                    <state key="normal">
+                    <state key="normal" backgroundImage="default_left_icon">
                         <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -108,7 +105,7 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.38431372549999998" green="0.67843137249999996" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="Dzg-Z3-fyK" secondAttribute="bottom" constant="18" id="128-oB-KmD"/>
                 <constraint firstAttribute="trailing" secondItem="FPj-tR-UR5" secondAttribute="trailing" id="4p8-Dj-nhe"/>
@@ -131,6 +128,8 @@
         </view>
     </objects>
     <resources>
-        <image name="icon_quit" width="40" height="40"/>
+        <image name="default_left_icon" width="40" height="40"/>
+        <image name="default_quit" width="40" height="40"/>
+        <image name="default_right_icon" width="40" height="40"/>
     </resources>
 </document>

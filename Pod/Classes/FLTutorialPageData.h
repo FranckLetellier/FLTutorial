@@ -17,10 +17,10 @@
 @property (nonatomic, assign) NSInteger yOffset;
 
 
-+(FLTutorialPageData*)tutorialPageWithImageName:(NSString*)image
-                                       iconName:(NSString*)icon
-                                           text:(NSString*)text
-                                         offset:(NSInteger)offset;
++(FLTutorialPageData*)tutorialPageWithImage:(UIImage*)image
+                                       icon:(UIImage*)icon
+                                       text:(NSString*)text
+                                     offset:(NSInteger)offset;
 
 @end
 

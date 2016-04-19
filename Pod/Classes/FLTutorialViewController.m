@@ -9,6 +9,7 @@
 #import "FLTutorialViewController.h"
 #import "FLTutorialPageData.h"
 #import "FLTutorialTextView.h"
+#import "FLConstants.h"
 
 @interface FLTutorialViewController ()<UIScrollViewDelegate>
 
@@ -44,6 +45,9 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.exitButton setTitle:_Tb(@"tutorial.quit")
+                     forState:UIControlStateNormal];
     //Setup hidden button
     self.leftButton.alpha = 0;
     self.exitButton.hidden = YES;
